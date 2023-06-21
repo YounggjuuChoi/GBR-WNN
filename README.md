@@ -75,7 +75,8 @@ We used [Vimeo90K](https://arxiv.org/pdf/1711.09078.pdf) dataset for training an
        ```
        
     5) Generate LMDB
-       
+ 
+       Run in ./codes/data_processing_scripts/
        ```bash
        python generate_lmdb_Vimeo90K.py
        ```
