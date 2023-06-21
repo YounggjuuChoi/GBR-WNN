@@ -26,11 +26,11 @@
 </p>
 
 <p align="center">
-  <img width="500" src="./images/fig4.PNG">
+  <img width="500" src="./images/img4.PNG">
 </p>
 
 <p align="center">
-  <img width="500" src="./images/fig5.PNG">
+  <img width="500" src="./images/img5.PNG">
 </p>
 
 ----------------------------
@@ -39,7 +39,7 @@
 - Anaconda3
 - Python == 3.6
     ```bash
-    conda create --name waen python=3.6
+    conda create --name gbrwnn python=3.6
     ```
 - [PyTorch](https://pytorch.org/) (NVIDIA GPU + [CUDA](https://developer.nvidia.com/cuda-downloads))
     
@@ -57,53 +57,80 @@
 
 
 #### Dataset Preparation
-We used Vimeo90K dataset for training and Vid4, REDS4, SPMCS, DAVIS-2019 datasets for testing.
-- Download
+We used [Vimeo90K](https://arxiv.org/pdf/1711.09078.pdf) dataset for training and [Vid4](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6549107), [REDS4](https://openaccess.thecvf.com/content_CVPRW_2019/papers/NTIRE/Nah_NTIRE_2019_Challenge_on_Video_Deblurring_and_Super-Resolution_Dataset_and_CVPRW_2019_paper.pdf), [SPMCS](https://openaccess.thecvf.com/content_ICCV_2017/papers/Tao_Detail-Revealing_Deep_Video_ICCV_2017_paper.pdf), [DAVIS-2019](https://arxiv.org/pdf/1905.00737.pdf) datasets for testing.
 
-    Please refer to **[Dataset.md](https://github.com/YounggjuuChoi/Deep-Video-Super-Resolution/blob/master/Doc/Dataset.md)** in our **[Deep-Video-Super-Resolution](https://github.com/YounggjuuChoi/Deep-Video-Super-Resolution)** repository for more details.
-    
-    Put the datasets in ./datasets/
-    
 - Prepare for Vimeo90K
 
-    Run in ./codes/data_processing_scripts/ 
+    1) Please refer to **[Dataset.md](https://github.com/YounggjuuChoi/Deep-Video-Super-Resolution/blob/master/Doc/Dataset.md)** in our **[Deep-Video-Super-Resolution](https://github.com/YounggjuuChoi/Deep-Video-Super-Resolution)** repository for more details.
+
+    2) Download dataset from the [official website](http://toflow.csail.mit.edu/).
     
-    Generate LR data
-    ```bash
-    python generate_LR_Vimeo90K.py
-    ```
-    
-    Generate LMDB
-    ```bash
-    python generate_lmdb_Vimeo90K.py
-    ```
+    3) Put the dataset in ./datasets/
+ 
+    4) Generate LR data
+       
+       Run in ./codes/data_processing_scripts/
+       ```bash
+       python generate_LR_Vimeo90K.py
+       ```
+       
+    5) Generate LMDB
+       
+       ```bash
+       python generate_lmdb_Vimeo90K.py
+       ```
     
 - Prepare for Vid4
 
-    Run in ./codes/data_processing_scripts/ 
+    1) Please refer to **[Dataset.md](https://github.com/YounggjuuChoi/Deep-Video-Super-Resolution/blob/master/Doc/Dataset.md)** in our **[Deep-Video-Super-Resolution](https://github.com/YounggjuuChoi/Deep-Video-Super-Resolution)** repository for more details.
+ 
+    2) Download dataset from [here](https://drive.google.com/drive/folders/1An6hF1oYkeWxfOBxxKm073mvgIFrBNDA).
     
-    Generate LR data
-    ```bash
-    python generate_LR_Vid4.py
-    ```
+    3) Put the dataset in ./datasets/
+ 
+    4) Generate LR data
+
+       Run in ./codes/data_processing_scripts/ 
+
+       ```bash
+       python generate_LR_Vid4.py
+       ```
+
+- Prepare for REDS4
+
+    1) Please refer to **[Dataset.md](https://github.com/YounggjuuChoi/Deep-Video-Super-Resolution/blob/master/Doc/Dataset.md)** in our **[Deep-Video-Super-Resolution](https://github.com/YounggjuuChoi/Deep-Video-Super-Resolution)** repository for more details.
+ 
+    2) Download dataset from the [official website](https://seungjunnah.github.io/Datasets/reds.html).
+    
+    3) Put the dataset in ./datasets/
 
 - Prepare for SPMCS
 
-    Run in ./codes/data_processing_scripts/ 
+    1) Download dataset from [here](https://github.com/jiangsutx/SPMC_VideoSR).
     
-    Generate LR data
-    ```bash
-    python generate_LR_SPMCS.py
-    ```
+    2) Put the dataset in ./datasets/
+ 
+    3) Generate LR data
+
+       Run in ./codes/data_processing_scripts/ 
+
+       ```bash
+       python generate_LR_SPMCS.py
+       ```
 
 - Prepare for DAVIS-2019
 
-    Run in ./codes/data_processing_scripts/ 
+    1) Download dataset from the [official website](https://davischallenge.org/challenge2019/unsupervised.html).
     
-    Generate LR data
-    ```bash
-    python generate_LR_DAVIS.py
-    ```
+    2) Put the dataset in ./datasets/
+ 
+    3) Generate LR data
+
+       Run in ./codes/data_processing_scripts/ 
+
+       ```bash
+       python generate_LR_DAVIS.py
+       ```
 
 
 #### Model Zoo
@@ -167,6 +194,8 @@ Run in ./codes/
 ```bash
 python test.py
 ```
+
+You can test the GBR-WNN-L, GBR-WNN-M, GBR-WNN-S models under Vid4, REDS4, SPMCS, DAVIS-2019 test datasets by modifying the _'model_mode'_ and _'data_mode'_ in source code.
     
 ----------------------------
 ## Citation
