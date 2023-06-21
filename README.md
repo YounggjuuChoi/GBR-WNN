@@ -1,4 +1,4 @@
-# Group-based bi-directional recurrent wavelet neural network for efficient video super-resolution (VSR)
+# Group-based Bi-Directional Recurrent Wavelet Neural Network for Efficient Video Super-Resolution (VSR)
 #### Young-Ju Choi, Young-Woon Lee, and Byung-Gyu Kim
 #### Intelligent Vision Processing Lab. (IVPL), Sookmyung Women's University, Seoul, Republic of Korea
 ----------------------------
