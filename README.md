@@ -135,9 +135,9 @@ We used [Vimeo90K](https://arxiv.org/pdf/1711.09078.pdf) dataset for training an
 
 
 #### Model Zoo
-Pre-trained models and testing log files are available in below link.
+Pre-trained models are available in below link.
 
-[![google-drive](https://img.shields.io/badge/Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1Zo-KGRbgvEB10oKv1u4gZaDxGkJuJFPC?usp=sharing)
+[![google-drive](https://img.shields.io/badge/Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1L379h1XRjGC2Bwh5At9MUTbRYm0OXHiN?usp=sharing)
 
 
 ----------------------------
